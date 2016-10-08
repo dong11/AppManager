@@ -3,6 +3,7 @@
           package="com.rex.hwong.appmanager">
 
     <application
+        android:name=".MyApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -15,6 +16,14 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+
+        <activity android:name=".OpenAppActivity" android:theme="@style/dialog"/>
+
+
+        <service android:name=".service.Service1" android:process=":process1"/>
+        <receiver android:name=".receiver.Receiver1" android:process=":process1"/>
+        <service android:name=".service.Service2" android:process=":process2"/>
+        <receiver android:name=".receiver.Receiver2" android:process=":process2"/>
     </application>
 
 </manifest>
